@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button class="btn btn-success d-block my-3">
+      <a class="text-decoration-none text-white" href="../all.html">All</a>
+    </button>
+    <div class="container p-3 d-flex flex-column gap-3">
+      <div class="target">Targeted Div</div>
+      <div>
+        <button class="btn btn-success" onclick="manipulateDOM()">
+          Manipulate DOM
+        </button>
+      </div>
+    </div>
+
+    <script>
+      let url =
+        "https://images.pexels.com/photos/159825/color-pencil-drawing-coloring-colored-pencils-159825.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
+      let targetEl = document.querySelector(".target");
+      function manipulateDOM() {
+        targetEl.innerHTML = "";
+        let imgEl = document.createElement("img");
+        imgEl.style.cssText = `width:400px;height:300px;object-fit:cover;`;
+        imgEl.src = url;
+        targetEl.appendChild(imgEl);
+      }
+    </script>
+  </body>
+</html>

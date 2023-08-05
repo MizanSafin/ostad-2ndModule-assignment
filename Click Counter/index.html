@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click Counter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button class="btn btn-success d-block my-3">
+      <a class="text-decoration-none text-white" href="../all.html">All</a>
+    </button>
+    <div class="container p-3">
+      <p class="counter display-2">0</p>
+      <button class="btn btn-info" onclick="increment()">
+        Increment count
+      </button>
+    </div>
+    <script>
+      let counterEl = document.querySelector(".counter");
+      let count = 0;
+      function increment() {
+        count++;
+        counterEl.textContent = count;
+      }
+    </script>
+  </body>
+</html>
